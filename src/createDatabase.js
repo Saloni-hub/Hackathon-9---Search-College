@@ -1,9 +1,9 @@
-const { connection } = require('./connector')
+const { collegeModel } = require('./connector')
 const { data } = require('./data')
 
 const refreshAll = async () => {
-    await connection.deleteMany({})
+    await collegeModel.deleteMany({})
     // console.log(connection)
-    await connection.insertMany(data)
+    await collegeModel.insertMany(data)
 }
 refreshAll()
